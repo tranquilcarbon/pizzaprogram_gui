@@ -217,10 +217,15 @@ namespace Pizza_Program
             {
                 //          0               1               2           3               4
                 //("Small Size Pizza, New York type, beef topping, french fries side, 16.99")
-                total += Convert.ToDouble(item.SubItems[4].Text);
+                total += Convert.ToDouble(item.SubItems[2].Text);
                 string amount = total.ToString("C2");
                 TXT_Cost.Text = amount;
             }
+
+        }
+
+        private void RDO_Pizza_Size_Large_CheckedChanged(object sender, EventArgs e)
+        {
 
         }
     }

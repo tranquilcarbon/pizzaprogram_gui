@@ -54,11 +54,12 @@
             this.TXT_Cost = new System.Windows.Forms.TextBox();
             this.BTN_Submit = new System.Windows.Forms.Button();
             this.LBL_Price = new System.Windows.Forms.Label();
-            this.LBL_Build_Order = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.GRP_Pizza_Size.SuspendLayout();
             this.GRP_Toppings.SuspendLayout();
             this.GRP_Pizza_Type.SuspendLayout();
             this.GRP_Sides.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // GRP_Pizza_Size
@@ -67,9 +68,9 @@
             this.GRP_Pizza_Size.Controls.Add(this.RDO_Pizza_Size_Medium);
             this.GRP_Pizza_Size.Controls.Add(this.RDO_Pizza_Size_Small);
             this.GRP_Pizza_Size.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.GRP_Pizza_Size.Location = new System.Drawing.Point(12, 89);
+            this.GRP_Pizza_Size.Location = new System.Drawing.Point(12, 143);
             this.GRP_Pizza_Size.Name = "GRP_Pizza_Size";
-            this.GRP_Pizza_Size.Size = new System.Drawing.Size(282, 100);
+            this.GRP_Pizza_Size.Size = new System.Drawing.Size(282, 46);
             this.GRP_Pizza_Size.TabIndex = 0;
             this.GRP_Pizza_Size.TabStop = false;
             this.GRP_Pizza_Size.Text = "Pizza Size";
@@ -78,19 +79,20 @@
             // 
             this.RDO_Pizza_Size_Large.AutoSize = true;
             this.RDO_Pizza_Size_Large.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.RDO_Pizza_Size_Large.Location = new System.Drawing.Point(10, 70);
+            this.RDO_Pizza_Size_Large.Location = new System.Drawing.Point(163, 21);
             this.RDO_Pizza_Size_Large.Name = "RDO_Pizza_Size_Large";
             this.RDO_Pizza_Size_Large.Size = new System.Drawing.Size(61, 18);
             this.RDO_Pizza_Size_Large.TabIndex = 2;
             this.RDO_Pizza_Size_Large.TabStop = true;
             this.RDO_Pizza_Size_Large.Text = "Large";
             this.RDO_Pizza_Size_Large.UseVisualStyleBackColor = true;
+            this.RDO_Pizza_Size_Large.CheckedChanged += new System.EventHandler(this.RDO_Pizza_Size_Large_CheckedChanged);
             // 
             // RDO_Pizza_Size_Medium
             // 
             this.RDO_Pizza_Size_Medium.AutoSize = true;
             this.RDO_Pizza_Size_Medium.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.RDO_Pizza_Size_Medium.Location = new System.Drawing.Point(10, 45);
+            this.RDO_Pizza_Size_Medium.Location = new System.Drawing.Point(74, 21);
             this.RDO_Pizza_Size_Medium.Name = "RDO_Pizza_Size_Medium";
             this.RDO_Pizza_Size_Medium.Size = new System.Drawing.Size(73, 18);
             this.RDO_Pizza_Size_Medium.TabIndex = 1;
@@ -356,15 +358,15 @@
             this.LBL_Price.TabIndex = 7;
             this.LBL_Price.Text = "Price";
             // 
-            // LBL_Build_Order
+            // pictureBox1
             // 
-            this.LBL_Build_Order.AutoSize = true;
-            this.LBL_Build_Order.Font = new System.Drawing.Font("Verdana", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LBL_Build_Order.Location = new System.Drawing.Point(12, 9);
-            this.LBL_Build_Order.Name = "LBL_Build_Order";
-            this.LBL_Build_Order.Size = new System.Drawing.Size(298, 59);
-            this.LBL_Build_Order.TabIndex = 8;
-            this.LBL_Build_Order.Text = "Build Order";
+            this.pictureBox1.Image = global::Pizza_Program.Properties.Resources.logo;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(133, 116);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
             // 
             // Form1
             // 
@@ -372,7 +374,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(696, 546);
-            this.Controls.Add(this.LBL_Build_Order);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.LBL_Price);
             this.Controls.Add(this.BTN_Submit);
             this.Controls.Add(this.TXT_Cost);
@@ -391,6 +393,7 @@
             this.GRP_Pizza_Type.PerformLayout();
             this.GRP_Sides.ResumeLayout(false);
             this.GRP_Sides.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -424,6 +427,6 @@
         private CheckBox CHK_Potato_Wedges_Side;
         private CheckBox CHK_Bread_Sticks_Side;
         private CheckBox CHK_Onion_Rings_Side;
-        private Label LBL_Build_Order;
+        private PictureBox pictureBox1;
     }
 }
